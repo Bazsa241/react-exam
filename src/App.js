@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import Countries from "./components/Countries"
+import Languages from "./components/Languages"
 
-function App() {
+const langs = [
+  {language: "English", fluency: "Native"},
+  {language: "German", fluency: "Limited Working"},
+  {language: "Spanish", fluency: "Limited Working"},
+  {language: "Chinese", fluency: "Elementary"},
+  {language: "Latin", fluency: "Elementary"}
+]
+
+const countries = [
+    {name: "United Kingdom", capital: "London"},
+    {name: "United States of America", capital: "Washington DC"},
+    {name: "Hungary", capital: "Budapest"},
+    {name: "Romania", capital: "Bucharest"},
+]
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Languages langs={langs}/>
+      <br/>
+      <Countries countries={countries}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
